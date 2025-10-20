@@ -9,3 +9,4 @@ services:
         value: 3.10.0
       - key: PORT
         value: 5000
+
