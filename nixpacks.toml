@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ["python311", "python311Packages.pip", "libGL", "libGLU"]
-
-[phases.install]
-cmds = ["python3.11 -m pip install --upgrade pip", "python3.11 -m pip install -r requirements.txt"]
-
-[start]
-cmd = "gunicorn --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 300 --max-requests 1000 app:app"
